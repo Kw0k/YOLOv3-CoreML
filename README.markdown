@@ -10,5 +10,5 @@ This repo was forked and modified from [Ma-Dan/YOLOv3-CoreML](https://github.com
 
 To be continued...
 
-![avatar](yolo1.png)
-![avatar](yolo2.png)
+![avatar](yolo1.jpg)
+![avatar](yolo2.jpg)
