@@ -18,8 +18,7 @@
 		F517FC6C239B7C2200735529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC25FA51EF1B7D1002ECBBA /* Main.storyboard */; };
 		F517FCB3239B7EB100735529 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F517FCB2239B7EB100735529 /* Launch Screen.storyboard */; };
 		F517FCB5239B7F8900735529 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F517FCB4239B7F8900735529 /* Asset.xcassets */; };
-		F56E08B2239BC05300981255 /* Chancery.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F56E08B1239BC05300981255 /* Chancery.ttf */; };
-		F57FA58E239CF93C0072E68A /* Yolov3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F57FA58D239CF93C0072E68A /* Yolov3.mlmodel */; };
+		F520D30E239D046200CE6309 /* Yolov3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F520D30D239D046200CE6309 /* Yolov3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +35,7 @@
 		7BC25FB51EF27C0D002ECBBA /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		F517FCB2239B7EB100735529 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F517FCB4239B7F8900735529 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
-		F56E08B1239BC05300981255 /* Chancery.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Chancery.ttf; path = ../../../Downloads/Chancery.ttf; sourceTree = "<group>"; };
-		F57FA58D239CF93C0072E68A /* Yolov3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Yolov3.mlmodel; sourceTree = "<group>"; };
+		F520D30D239D046200CE6309 /* Yolov3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Yolov3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +68,7 @@
 		7BC25FA01EF1B7D1002ECBBA /* YOLOv3-CoreML */ = {
 			isa = PBXGroup;
 			children = (
-				F57FA58D239CF93C0072E68A /* Yolov3.mlmodel */,
-				F56E08B1239BC05300981255 /* Chancery.ttf */,
+				F520D30D239D046200CE6309 /* Yolov3.mlmodel */,
 				372CB263209C9B2600F501E3 /* BoundingBox.swift */,
 				372CB264209C9B2600F501E3 /* Helpers.swift */,
 				372CB261209C9B0F00F501E3 /* AppDelegate.swift */,
@@ -148,7 +145,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F517FCB5239B7F8900735529 /* Asset.xcassets in Resources */,
-				F56E08B2239BC05300981255 /* Chancery.ttf in Resources */,
 				F517FCB3239B7EB100735529 /* Launch Screen.storyboard in Resources */,
 				F517FC6C239B7C2200735529 /* Main.storyboard in Resources */,
 			);
@@ -168,7 +164,7 @@
 				372CB262209C9B0F00F501E3 /* AppDelegate.swift in Sources */,
 				7BA1C6D21EF2827800BB25EF /* UIImage+CVPixelBuffer.swift in Sources */,
 				7BC25FA41EF1B7D1002ECBBA /* ViewController.swift in Sources */,
-				F57FA58E239CF93C0072E68A /* Yolov3.mlmodel in Sources */,
+				F520D30E239D046200CE6309 /* Yolov3.mlmodel in Sources */,
 				7BA1C6D81EF2871600BB25EF /* YOLO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
