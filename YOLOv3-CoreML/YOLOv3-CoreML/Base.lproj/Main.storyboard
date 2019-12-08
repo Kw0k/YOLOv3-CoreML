@@ -1,77 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Menlo.ttc">
-            <string>Menlo-Regular</string>
+        <array key="Chancery.ttf">
+            <string>Apple-Chancery</string>
         </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YOLOv3_CoreML" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iYOLO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ" colorLabel="IBBuiltInLabel-Red"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6b2-uP-TiX" userLabel="Video Preview">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNc-Bp-8Q7">
-                                <rect key="frame" x="0.0" y="0.0" width="416" height="416"/>
+                            <view contentMode="scaleToFill" id="6b2-uP-TiX" userLabel="Video Preview">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cau-LW-nDZ" userLabel="Results">
-                                <rect key="frame" x="0.0" y="633" width="375" height="34"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elapsed time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nv7-zv-Hv7">
-                                        <rect key="frame" x="20" y="10" width="335" height="14"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rh3-Ui-Tlt">
+                                        <rect key="frame" x="312" y="832" width="82" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="pause.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="pauseBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="neK-aD-bs3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gI-tv-FyV">
+                                        <rect key="frame" x="238" y="834" width="69" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" image="play.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="playBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jEK-04-a84"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="耗时" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nv7-zv-Hv7">
+                                        <rect key="frame" x="20" y="838" width="374" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" name="Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iYOLO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kr-3u-PjA">
+                                        <rect key="frame" x="20" y="40" width="374" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Apple-Chancery" family="Apple Chancery" pointSize="35"/>
+                                        <color key="textColor" name="Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Nv7-zv-Hv7" secondAttribute="bottom" constant="10" id="RnN-mQ-1Ld"/>
-                                    <constraint firstItem="Nv7-zv-Hv7" firstAttribute="leading" secondItem="Cau-LW-nDZ" secondAttribute="leading" constant="20" id="YWK-0U-hbi"/>
-                                    <constraint firstAttribute="trailing" secondItem="Nv7-zv-Hv7" secondAttribute="trailing" constant="20" id="c27-CJ-wZL"/>
-                                    <constraint firstItem="Nv7-zv-Hv7" firstAttribute="top" secondItem="Cau-LW-nDZ" secondAttribute="top" constant="10" id="lQX-Nw-dxK"/>
-                                </constraints>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6b2-uP-TiX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5fy-Bv-RZx"/>
-                            <constraint firstItem="Cau-LW-nDZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F86-Vt-lK5"/>
                             <constraint firstAttribute="trailing" secondItem="6b2-uP-TiX" secondAttribute="trailing" id="VLN-Lj-dMD"/>
-                            <constraint firstAttribute="trailing" secondItem="Cau-LW-nDZ" secondAttribute="trailing" id="bJZ-RP-DH0"/>
-                            <constraint firstAttribute="bottom" secondItem="Cau-LW-nDZ" secondAttribute="bottom" id="nW1-Gf-bkQ"/>
                             <constraint firstItem="6b2-uP-TiX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tQx-fh-d7D"/>
                             <constraint firstAttribute="bottom" secondItem="6b2-uP-TiX" secondAttribute="bottom" id="xIr-G9-dgn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="debugImageView" destination="YNc-Bp-8Q7" id="Efd-I1-2Hu"/>
+                        <outlet property="PlayBtn" destination="5gI-tv-FyV" id="6a8-L0-e00"/>
+                        <outlet property="pauseBtn" destination="rh3-Ui-Tlt" id="rWw-F1-CDk"/>
+                        <outlet property="playBtn" destination="5gI-tv-FyV" id="sZ7-WU-e0q"/>
                         <outlet property="timeLabel" destination="Nv7-zv-Hv7" id="U6m-yA-4aP"/>
                         <outlet property="videoPreview" destination="6b2-uP-TiX" id="F9M-LA-bjs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+            <point key="canvasLocation" x="139.13043478260872" y="136.60714285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pause.fill" catalog="system" width="58" height="64"/>
+        <image name="play.fill" catalog="system" width="58" height="64"/>
+        <namedColor name="Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

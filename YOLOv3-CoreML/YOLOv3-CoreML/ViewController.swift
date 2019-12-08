@@ -7,10 +7,10 @@ import VideoToolbox
 class ViewController: UIViewController {
   @IBOutlet weak var videoPreview: UIView!
   @IBOutlet weak var timeLabel: UILabel!
-  @IBOutlet weak var debugImageView: UIImageView!
-
-  let yolo = YOLO()
-
+    
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var pauseBtn: UIButton!
+    let yolo = YOLO()
   var videoCapture: VideoCapture!
   var request: VNCoreMLRequest!
   var startTimes: [CFTimeInterval] = []
@@ -27,9 +27,10 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    playBtn.isEnabled = false
+    pauseBtn.adjustsImageWhenDisabled = true
+    playBtn.adjustsImageWhenDisabled = true
     timeLabel.text = ""
-
     setUpBoundingBoxes()
     setUpCoreImage()
     setUpVision()
@@ -37,8 +38,19 @@ class ViewController: UIViewController {
 
     frameCapturingStartTime = CACurrentMediaTime()
   }
-
-  override func didReceiveMemoryWarning() {
+    @IBAction func pauseBtnClick(_ sender: Any) {
+        videoCapture.stop()
+        pauseBtn.isEnabled = false
+        playBtn.isEnabled = true
+        
+    }
+    @IBAction func playBtnClick(_ sender: Any) {
+        videoCapture.start()
+        pauseBtn.isEnabled = true
+        playBtn.isEnabled = false
+    }
+    
+    override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     print(#function)
   }
@@ -88,8 +100,8 @@ class ViewController: UIViewController {
   func setUpCamera() {
     videoCapture = VideoCapture()
     videoCapture.delegate = self
-    videoCapture.fps = 50
-    videoCapture.setUp(sessionPreset: AVCaptureSession.Preset.vga640x480) { success in
+    videoCapture.fps = 240
+    videoCapture.setUp(sessionPreset: AVCaptureSession.Preset.hd1920x1080) { success in
       if success {
         // Add the video preview into the UI.
         if let previewLayer = self.videoCapture.previewLayer {
@@ -115,9 +127,7 @@ class ViewController: UIViewController {
     resizePreviewLayer()
   }
 
-  override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
-  }
+
 
   func resizePreviewLayer() {
     videoCapture.previewLayer?.frame = videoPreview.bounds
@@ -130,6 +140,12 @@ class ViewController: UIViewController {
       predict(pixelBuffer: pixelBuffer)
     }
   }
+    
+    @IBAction func flashBtn(_ sender: Any) {
+        
+    }
+    
+    
 
   func predict(pixelBuffer: CVPixelBuffer) {
     // Measure how long it takes to predict a single video frame.
@@ -187,8 +203,7 @@ class ViewController: UIViewController {
       self.show(predictions: boundingBoxes)
 
       let fps = self.measureFPS()
-      self.timeLabel.text = String(format: "Elapsed %.5f seconds - %.2f FPS", elapsed, fps)
-
+      self.timeLabel.text = String(format: "耗时：%.5f秒 - FPS：%.2f", elapsed, fps)
       self.semaphore.signal()
     }
   }
@@ -216,7 +231,7 @@ class ViewController: UIViewController {
         // aspect ratio. The video preview also may be letterboxed at the top
         // and bottom.
         let width = view.bounds.width
-        let height = width * 4 / 3
+        let height = width * 16 / 9
         let scaleX = width / CGFloat(YOLO.inputWidth)
         let scaleY = height / CGFloat(YOLO.inputHeight)
         let top = (view.bounds.height - height) / 2
