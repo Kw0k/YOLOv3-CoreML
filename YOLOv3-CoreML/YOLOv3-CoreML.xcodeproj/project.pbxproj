@@ -15,9 +15,11 @@
 		7BA1C6D81EF2871600BB25EF /* YOLO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA1C6D71EF2871600BB25EF /* YOLO.swift */; };
 		7BA1C6DA1EF2B30200BB25EF /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA1C6D91EF2B30200BB25EF /* CVPixelBuffer+Helpers.swift */; };
 		7BC25FA41EF1B7D1002ECBBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC25FA31EF1B7D1002ECBBA /* ViewController.swift */; };
-		7BC25FA71EF1B7D1002ECBBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC25FA51EF1B7D1002ECBBA /* Main.storyboard */; };
-		7BC25FA91EF1B7D1002ECBBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC25FA81EF1B7D1002ECBBA /* Assets.xcassets */; };
-		7BC25FB41EF1CEB0002ECBBA /* YOLOv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7BC25FB31EF1CEAE002ECBBA /* YOLOv3.mlmodel */; };
+		F517FC6C239B7C2200735529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC25FA51EF1B7D1002ECBBA /* Main.storyboard */; };
+		F517FCB3239B7EB100735529 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F517FCB2239B7EB100735529 /* Launch Screen.storyboard */; };
+		F517FCB5239B7F8900735529 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F517FCB4239B7F8900735529 /* Asset.xcassets */; };
+		F56E08B2239BC05300981255 /* Chancery.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F56E08B1239BC05300981255 /* Chancery.ttf */; };
+		F57FA58E239CF93C0072E68A /* Yolov3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F57FA58D239CF93C0072E68A /* Yolov3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,13 +29,15 @@
 		7BA1C6D11EF2827500BB25EF /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
 		7BA1C6D71EF2871600BB25EF /* YOLO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOLO.swift; sourceTree = "<group>"; };
 		7BA1C6D91EF2B30200BB25EF /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
-		7BC25F9E1EF1B7D1002ECBBA /* YOLOv3-CoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YOLOv3-CoreML.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC25F9E1EF1B7D1002ECBBA /* iYOLO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iYOLO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC25FA31EF1B7D1002ECBBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7BC25FA61EF1B7D1002ECBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7BC25FA81EF1B7D1002ECBBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BC25FAD1EF1B7D1002ECBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BC25FB31EF1CEAE002ECBBA /* YOLOv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3.mlmodel; sourceTree = "<group>"; };
 		7BC25FB51EF27C0D002ECBBA /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		F517FCB2239B7EB100735529 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F517FCB4239B7F8900735529 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
+		F56E08B1239BC05300981255 /* Chancery.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Chancery.ttf; path = ../../../Downloads/Chancery.ttf; sourceTree = "<group>"; };
+		F57FA58D239CF93C0072E68A /* Yolov3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Yolov3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,7 @@
 		7BC25F9F1EF1B7D1002ECBBA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7BC25F9E1EF1B7D1002ECBBA /* YOLOv3-CoreML.app */,
+				7BC25F9E1EF1B7D1002ECBBA /* iYOLO.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,18 +70,20 @@
 		7BC25FA01EF1B7D1002ECBBA /* YOLOv3-CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				F57FA58D239CF93C0072E68A /* Yolov3.mlmodel */,
+				F56E08B1239BC05300981255 /* Chancery.ttf */,
 				372CB263209C9B2600F501E3 /* BoundingBox.swift */,
 				372CB264209C9B2600F501E3 /* Helpers.swift */,
 				372CB261209C9B0F00F501E3 /* AppDelegate.swift */,
-				7BC25FA81EF1B7D1002ECBBA /* Assets.xcassets */,
 				7BA1C6D91EF2B30200BB25EF /* CVPixelBuffer+Helpers.swift */,
 				7BC25FAD1EF1B7D1002ECBBA /* Info.plist */,
 				7BC25FA51EF1B7D1002ECBBA /* Main.storyboard */,
-				7BC25FB31EF1CEAE002ECBBA /* YOLOv3.mlmodel */,
+				F517FCB2239B7EB100735529 /* Launch Screen.storyboard */,
 				7BA1C6D11EF2827500BB25EF /* UIImage+CVPixelBuffer.swift */,
 				7BC25FB51EF27C0D002ECBBA /* VideoCapture.swift */,
 				7BC25FA31EF1B7D1002ECBBA /* ViewController.swift */,
 				7BA1C6D71EF2871600BB25EF /* YOLO.swift */,
+				F517FCB4239B7F8900735529 /* Asset.xcassets */,
 			);
 			path = "YOLOv3-CoreML";
 			sourceTree = "<group>";
@@ -99,7 +105,7 @@
 			);
 			name = "YOLOv3-CoreML";
 			productName = "YOLOv3-CoreML";
-			productReference = 7BC25F9E1EF1B7D1002ECBBA /* YOLOv3-CoreML.app */;
+			productReference = 7BC25F9E1EF1B7D1002ECBBA /* iYOLO.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -141,8 +147,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BC25FA91EF1B7D1002ECBBA /* Assets.xcassets in Resources */,
-				7BC25FA71EF1B7D1002ECBBA /* Main.storyboard in Resources */,
+				F517FCB5239B7F8900735529 /* Asset.xcassets in Resources */,
+				F56E08B2239BC05300981255 /* Chancery.ttf in Resources */,
+				F517FCB3239B7EB100735529 /* Launch Screen.storyboard in Resources */,
+				F517FC6C239B7C2200735529 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,12 +163,12 @@
 			files = (
 				7BA1C6D01EF27DA000BB25EF /* VideoCapture.swift in Sources */,
 				7BA1C6DA1EF2B30200BB25EF /* CVPixelBuffer+Helpers.swift in Sources */,
-				7BC25FB41EF1CEB0002ECBBA /* YOLOv3.mlmodel in Sources */,
 				372CB265209C9B2600F501E3 /* BoundingBox.swift in Sources */,
 				372CB266209C9B2600F501E3 /* Helpers.swift in Sources */,
 				372CB262209C9B0F00F501E3 /* AppDelegate.swift in Sources */,
 				7BA1C6D21EF2827800BB25EF /* UIImage+CVPixelBuffer.swift in Sources */,
 				7BC25FA41EF1B7D1002ECBBA /* ViewController.swift in Sources */,
+				F57FA58E239CF93C0072E68A /* Yolov3.mlmodel in Sources */,
 				7BA1C6D81EF2871600BB25EF /* YOLO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +183,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 /* End PBXVariantGroup section */
 
@@ -286,15 +295,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 1067837450@qq.com (EA34W5QFTF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LXGRKDMEQU;
+				DEVELOPMENT_TEAM = L9QXWB9783;
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "YOLOv3-CoreML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.machinethink.YOLOv3-CoreML";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = fun.kwok.iYOLO;
+				PRODUCT_NAME = iYOLO;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
@@ -306,14 +315,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 1067837450@qq.com (EA34W5QFTF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LXGRKDMEQU;
+				DEVELOPMENT_TEAM = L9QXWB9783;
 				INFOPLIST_FILE = "YOLOv3-CoreML/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.machinethink.YOLOv3-CoreML";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = fun.kwok.iYOLO;
+				PRODUCT_NAME = iYOLO;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
